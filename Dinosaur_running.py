@@ -10,7 +10,7 @@ RED = (255, 0, 0)
 VELOCITY_X = 5
 VELOCITY_Y = 6
 
-SCORE = 0
+
 SCORE_FONT = pygame.font.SysFont('time', 20)
 GAME_FONT = pygame.font.SysFont('time', 50)
 
@@ -60,9 +60,9 @@ while run:
             dinosaur_y += VELOCITY_Y
     
     if dinosaur_rect.colliderect(obstacle_rect):
-            game_over_text = GAME_FONT.render("GAME OVER", 1, RED)
-            screen.blit(game_over_text, (200, 150))
-            VELOCITY_X = 0
+        game_over_text = GAME_FONT.render("GAME OVER", 1, RED)
+        screen.blit(game_over_text, (200, 150))
+        VELOCITY_X = 0
             
     clock.tick(FPS)
     for event in pygame.event.get():
